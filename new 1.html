@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="new 1.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="bal" id="bal"></div>
+		
+		<div class="jobb">
+			<div class="kepernyo"></div>
+			<div class="gombok" id="gombok"></div>
+			<button onclick="vasarlas()">OK</button>
+
+			<div class="tarolo" id="tarolo"></div>>
+		
+		</div>
+		
+	</div>
+	
+	<script>
+	//gombok létrehozása & kezelése
+	let gomb_tarolo= document.getElementId("gombok");
+	
+	for(let i=1; i <= 9; i++){
+		gomb_tarolo.innerHTML += 'button onclick="katt('+i+')">' + i + '</button>'
+	}
+	
+	let kivalasztott =-1;
+	function katt(szam) {
+		document.getElementId("kepernyo").innerHTML = szam;
+		kivalasztott = szam;
+	}
+	function vasarlas(){
+		if(udito_kepek[kivalasztott-1] == undefined)
+		document.getElementById("kepernyo").innerHTML = "Elfogyott!";
+	}else{
+		alert("Megvetted a " +udito_kepek[kivalasztott-1]+ "üdítőt!")
+		document.getElementById("tarolo").innerHTML = 'img src="'+udito_kepek[kivalasztott-1]+'">';
+	}
+	
+	let udito_arak{
+		150,
+		280,
+		300,
+		290,
+		320,
+		100,
+
+	}
+
+	//Üdítők felpakolása
+	let  uditok = document.getElementId("bal");
+	let udito_kepek=[
+		"apenta.jpg";
+	 	"cocacola.png";
+		"cola.jpg";
+		"hellkave.jpg";
+		"kinley.jpg";
+		"marka.jpg";
+	];
+
+	
+
+	for(let i=0; i <uditok_kepek.Length; i++){
+		uditok.innerHTML +=
+		'<div><img.src="' + uditok_kepek[i] +'"> + ()</div>'>;
+	}
+	
+	
+	</script>
+</body>
+
+</html>
